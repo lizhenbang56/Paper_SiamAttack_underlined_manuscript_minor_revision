@@ -1,5 +1,3 @@
-%!TEX program = pdflatex
-%!BIB program = bibtex
 \documentclass[journal]{IEEEtran}
 \usepackage{graphicx}  % 用于 includegraphics
 \usepackage{booktabs}  % 用于表格 midrule
@@ -766,7 +764,7 @@ However, we may only know the video content while the groundtruth box informatio
   \caption{Attack results on OTB2015, GOT-Val and LaSOT with or without the groundtruth information.}
   \begin{tabular}{rrcccc}
   \toprule
-  \multirow{2}{*}[-2pt]{Benchmarks} & \multirow{2}{*}[-2pt]{Metrics} & \multicolumn{2}{c}{Unargeted Attack} & \multicolumn{2}{c}{Targeted Attack} \\ \cmidrule{3-6}
+  \multirow{2}{*}[-2pt]{Benchmarks} & \multirow{2}{*}[-2pt]{Metrics} & \multicolumn{2}{c}{Untargeted Attack} & \multicolumn{2}{c}{Targeted Attack} \\ \cmidrule{3-6}
                               &                          & w/ GT  & \multicolumn{1}{l}{w/o GT}  & w/ GT  & \multicolumn{1}{l}{w/o GT} \\ \midrule
   \multirow{2}{*}{OTB2015}     & AO                       & 0.063  & 0.056                       & 0.759  & 0.752                      \\
                               & Precision                & 0.092  & 0.080                       & 0.795  & 0.794                      \\ \midrule
@@ -803,7 +801,7 @@ As shown in Table \ref{table:direction}, our attack method achieves effective at
 
 \subsection{Transferability Analyses}
 
-\uline{In this part, we analyze the transferability of our proposed attack method. Specifically, we directly apply our perturbations trained on SiamFC++\_GoogleNet to other tracking networks including SiamFC++\_ShuffleNet, SiamFC++\_AlexNet, SiamPRN, SiamRPN++ and Ocean.}
+\uline{In this part, we analyze the transferability of our proposed attack method. Specifically, we directly apply our perturbations trained on SiamFC++\_GoogleNet to other tracking networks including SiamFC++\_ShuffleNet, SiamFC++\_AlexNet, SiamRPN, SiamRPN++ and Ocean.}
 
 %%%%%%%% 不同backbone的可迁移性 %%%%%%%%
 \begin{table}[t]
