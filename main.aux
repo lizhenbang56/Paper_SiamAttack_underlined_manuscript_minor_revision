@@ -1,0 +1,318 @@
+\relax 
+\citation{DBLP:journals/tcsv/ShanZLZH21}
+\citation{DBLP:journals/tcsv/FanSZYL21}
+\citation{DBLP:journals/tcsv/LiPWK20}
+\citation{9258983}
+\citation{TTP}
+\citation{FAN}
+\citation{SPARK}
+\citation{chen2020one}
+\citation{UAP}
+\citation{SiamFC++}
+\citation{OTB}
+\citation{GOT-10k}
+\citation{LaSOT}
+\citation{VOT2016}
+\citation{VOT2018}
+\citation{VOT2019}
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \uline {Being universal, our generated perturbations can be conveniently exploited to perturb videos on-the-fly without extra intensive computations except the mere addition operations.}}}{1}\protected@file@percent }
+\newlabel{fig:UAP}{{1}{1}}
+\citation{AutoTrack}
+\citation{9376997}
+\citation{9132673}
+\citation{SiamFC++}
+\citation{zhang2020ocean}
+\citation{cui2020fully}
+\citation{9157720}
+\citation{SiamRPN}
+\citation{SiamRPN++}
+\citation{SiamRPN}
+\citation{SiamRPN++}
+\citation{SiamFC++}
+\citation{zhang2020ocean}
+\citation{cui2020fully}
+\citation{9157720}
+\citation{zhang2020ocean}
+\citation{cui2020fully}
+\citation{9157720}
+\citation{9339950}
+\citation{9169672}
+\citation{intriguing}
+\citation{generating}
+\citation{zhang2020adversarial}
+\citation{morris2020textattack}
+\citation{jin2020bert}
+\citation{wei2019transferable}
+\citation{9343885}
+\citation{9294085}
+\citation{9169672}
+\citation{9343885}
+\citation{9343885}
+\citation{9294085}
+\citation{9294085}
+\citation{9169672}
+\citation{9169672}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces An illustration of our attacks to SiamFC++ on some example tracking sequences from GOT-10k benchmark. Our approach generates the video-agnostic perturbations which can force SiamFC++ to follow a complicated trajectory at virtually no cost. This is realized by off-line training the perturbations so that the tracker mistakenly believes the \textit  {fake target} area contains the object to be tracked (see the top heatmap). Moreover, the quality assessment branch in SiamFC++ is also misled to confirm this result (see the bottom heatmap). The \textit  {fake target} size is gradually decreased.}}{2}\protected@file@percent }
+\newlabel{fig:1}{{2}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Siamese Visual Tracking}{2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Adversarial Attacks}{2}\protected@file@percent }
+\citation{meng2019white}
+\citation{cheng2018query}
+\citation{li2019nattack}
+\citation{papernot2017practical}
+\citation{li2020projection}
+\citation{kurakin2018adversarial}
+\citation{SiamFC++}
+\citation{SiamRPN}
+\citation{SiamRPN++}
+\citation{zhang2020ocean}
+\citation{dai2018adversarial}
+\citation{li2018second}
+\citation{lin2017tactics}
+\citation{khrulkov2018art}
+\citation{mopuri2018nag}
+\citation{zhang2020understanding}
+\citation{mopuri2018generalizable}
+\citation{chen2018shapeshifter}
+\citation{intriguing}
+\citation{PGD}
+\citation{patch}
+\citation{karmon2018lavan}
+\citation{PAT}
+\citation{GOTURN}
+\citation{RTAA}
+\citation{SPARK}
+\citation{TTP}
+\citation{SiamFC++}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}Adversarial Attacks in Visual Tracking}{3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Method}{3}\protected@file@percent }
+\newlabel{method}{{III}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Problem Definition}{3}\protected@file@percent }
+\newlabel{problemdefinition}{{\mbox  {III-A}}{3}}
+\citation{FGSM}
+\citation{DBLP:conf/iclr/KurakinGB17a}
+\citation{UAP}
+\citation{shafahi2020universal}
+\citation{hirano2020simple}
+\citation{patch}
+\citation{FGSM}
+\citation{patch}
+\citation{TTP}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The training pipeline of the proposed method. We aim to train a translucent perturbation $\delta $ for the template image $\textbf  z$, and an adversarial patch $p$ for the search image $\textbf  x$. After adding $\delta $ to $\textbf  z$ and adding $p$ into $\textbf  x$, the tracker outputs the location and size of the \textit  {fake target} instead of the real target.}}{4}\protected@file@percent }
+\newlabel{fig:net}{{3}{4}}
+\citation{focal}
+\citation{iou-loss}
+\citation{FGSM}
+\citation{DBLP:conf/iclr/KurakinGB17a}
+\citation{FGSM}
+\citation{DBLP:conf/iclr/KurakinGB17a}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Results of targeted attacks where the tracker is forced to follow a predefined \textit  {fake trajectory} $B^{fake}=\{b^{fake}_i\}_1^{T}$ (indicated by the yellow bounding boxes). The \textit  {fake trajectory} follows the real trajectory $B^{gt}=\{b^{gt}_i\}_1^T$ (indicated by the red bounding boxes) except that the adjacent boundaries of $b^{fake}_i$ and $b^{gt}_i$ are 2 pixels apart.}}{5}\protected@file@percent }
+\newlabel{fig:vis1}{{4}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Generating Video-Agnostic Perturbations}{5}\protected@file@percent }
+\newlabel{generate}{{\mbox  {III-B}}{5}}
+\newlabel{eq:loss}{{10}{5}}
+\citation{DBLP:conf/iclr/KurakinGB17a}
+\citation{OTB}
+\citation{GOT-10k}
+\citation{LaSOT}
+\citation{VOT2016}
+\citation{VOT2018}
+\citation{VOT2019}
+\citation{VOT2016}
+\citation{VOT2018}
+\citation{VOT2019}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Training Process}}{6}\protected@file@percent }
+\newlabel{alg:algorithm}{{1}{6}}
+\newlabel{alg}{{1}{6}}
+\newlabel{equ:itcm}{{13}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Attacking the Tracker at Inference Time}{6}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Attack Process}}{6}\protected@file@percent }
+\newlabel{alg:algorithm_attack}{{2}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Experiments}{6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Experimental Setup}{6}\protected@file@percent }
+\newlabel{setup}{{\mbox  {IV-A}}{6}}
+\citation{SSIM}
+\citation{SiamFC++}
+\citation{GoogLeNet}
+\citation{COCO}
+\citation{VID}
+\citation{GOT-10k}
+\citation{LaSOT}
+\citation{UAP}
+\citation{patch}
+\citation{UAP}
+\citation{patch}
+\citation{UAP}
+\citation{patch}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Characteristics of the datasets used to train and evaluate the proposed attack method.}}{7}\protected@file@percent }
+\newlabel{tab:dataset}{{I}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Implementation Details}{7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Overall Attack Results on the Evaluation Benchmarks}{7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}\uline {Analyses of the Perceptibility of Our Perturbations}}{7}\protected@file@percent }
+\citation{FAN}
+\citation{FAN}
+\citation{FAN}
+\citation{8630918}
+\citation{8630918}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Overall attack results on VOT2016, VOT2018, VOT2019.}}{8}\protected@file@percent }
+\newlabel{tab:benchmark results1}{{II}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Overall attack results on OTB2015, GOT-Val and LaSOT.}}{8}\protected@file@percent }
+\newlabel{tab:benchmark results}{{III}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Comparison of attack performance with 2 baseline methods on GOT-Val in terms of AO. Baseline-1 performs untargeted attacks based on the UAP \cite  {UAP} method. Baseline-2 performs targeted attacks based on the adversarial patch \cite  {patch} method.}}{8}\protected@file@percent }
+\newlabel{tab:imperceptible}{{IV}{8}}
+\newlabel{fig:imperceptibleb}{{5(a)}{8}}
+\newlabel{sub@fig:imperceptibleb}{{(a)}{8}}
+\newlabel{fig:imperceptiblec}{{5(b)}{8}}
+\newlabel{sub@fig:imperceptiblec}{{(b)}{8}}
+\newlabel{fig:imperceptibled}{{5(c)}{8}}
+\newlabel{sub@fig:imperceptibled}{{(c)}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Visualization of perturbations on search images. Baseline-1 generates perturbations added to the whole search image and cannot perform targeted attacks. Baseline-2 pastes an obviously noticeable patch into the search image, which obviously raises the risk of being suspected. Our method adds a \textit  {small} universal patch to the search image to perform targeted attacks, which is is as translucent as in Baseline-1.}}{8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Baseline-1}}}{8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Baseline-2}}}{8}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {Ours}}}{8}\protected@file@percent }
+\newlabel{fig:imperceptible}{{5}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Influence of the number of training iterations on GOT-Val.}}{9}\protected@file@percent }
+\newlabel{tab:iter}{{V}{9}}
+\newlabel{fig:a1}{{6(a)}{9}}
+\newlabel{sub@fig:a1}{{(a)}{9}}
+\newlabel{fig:b1}{{6(b)}{9}}
+\newlabel{sub@fig:b1}{{(b)}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces The results under targeted attacks compared with FAN \cite  {FAN}. FAN crafts the perturbations for each video independently, which comes at a non-negligible computational cost. To achieve video-agnostic universal attacks, we relax the constraint on the value of the perturbations, achieving a balance between the attack efficiency and the perturbation perceptibility.}}{9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {FAN}}}{9}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Ours}}}{9}\protected@file@percent }
+\newlabel{fig:vis_fan}{{6}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces AO with respect to the real/fake trajectory on the perturbed GOT-Val dataset using three different patch sizes. The 32-by-32 patch can make the AO score decrease to 0.146 dramatically.}}{9}\protected@file@percent }
+\newlabel{fig:patch_size_table}{{7}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}Other Analyses}{9}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Comparison between attacking the different RGB and YCbCr color spaces. Attacking the YCbCr color space means we first convert the search image into YCbCr color space, and then add a perturbation to the entire search image in the Y channel and a different perturbation to a very small region of $64 \times 64$ in the CbCr channel. The attack performance is evaluated on GOT-Val.}}{10}\protected@file@percent }
+\newlabel{table:perturb}{{VI}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Visualization of the perturbations in attacking the different RGB and YCbCr color spaces. Note that the perturbation of the search image in the Y channel results in SSIM value of 0.95 outside the added patch area, which slightly deteriorate the imperceptibility. }}{10}\protected@file@percent }
+\newlabel{fig:YCbCr}{{8}{10}}
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Attack performance comparison using other random patterns. It is evaluated on GOT-Val.}}{10}\protected@file@percent }
+\newlabel{table:noise}{{VII}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Visualization of the manually generated similar random patterns.}}{10}\protected@file@percent }
+\newlabel{fig:random}{{9}{10}}
+\citation{ShuffleNet}
+\citation{AlexNet}
+\citation{SiamRPN++}
+\citation{SiamRPN}
+\citation{zhang2020ocean}
+\citation{SiamRPN}
+\citation{SiamRPN++}
+\citation{zhang2020ocean}
+\citation{CSA}
+\citation{RTAA}
+\citation{SPARK}
+\citation{FAN}
+\citation{TTP}
+\citation{SPARK}
+\citation{RTAA}
+\citation{CSA}
+\citation{FAN}
+\citation{TTP}
+\@writefile{lot}{\contentsline {table}{\numberline {VIII}{\ignorespaces Attack performance comparison when only adding the perturbation on the search/template image. It is evaluated on GOT-Val.}}{11}\protected@file@percent }
+\newlabel{table:one_branch}{{VIII}{11}}
+\@writefile{lot}{\contentsline {table}{\numberline {IX}{\ignorespaces Analysis of the impact of each loss component on GOT-Val.}}{11}\protected@file@percent }
+\newlabel{tab:loss}{{IX}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-F}}Transferability Analyses}{11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-G}}Comparison with Other Attack Methods}{11}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {X}{\ignorespaces Attack results on OTB2015, GOT-Val and LaSOT with or without the groundtruth information.}}{11}\protected@file@percent }
+\newlabel{tab:agent_GT}{{X}{11}}
+\@writefile{lot}{\contentsline {table}{\numberline {XI}{\ignorespaces Influence of two different ways to generate the fake trajectory: following a fixed direction in each video and following the real trajectory. It is evaluated on GOT-Val.}}{11}\protected@file@percent }
+\newlabel{table:direction}{{XI}{11}}
+\citation{CSA}
+\citation{RTAA}
+\citation{FAN}
+\citation{TTP}
+\bibstyle{IEEEtran}
+\bibdata{ref}
+\bibcite{DBLP:journals/tcsv/ShanZLZH21}{1}
+\bibcite{DBLP:journals/tcsv/FanSZYL21}{2}
+\bibcite{DBLP:journals/tcsv/LiPWK20}{3}
+\bibcite{9258983}{4}
+\bibcite{TTP}{5}
+\bibcite{FAN}{6}
+\bibcite{SPARK}{7}
+\bibcite{chen2020one}{8}
+\bibcite{UAP}{9}
+\bibcite{SiamFC++}{10}
+\bibcite{OTB}{11}
+\bibcite{GOT-10k}{12}
+\bibcite{LaSOT}{13}
+\@writefile{lot}{\contentsline {table}{\numberline {XII}{\ignorespaces Transferability to different backbones of our perturbations trained on SiamFC++\_GoogleNet. It is evaluated on GOT-Val.}}{12}\protected@file@percent }
+\newlabel{tab:backbone}{{XII}{12}}
+\@writefile{lot}{\contentsline {table}{\numberline {XIII}{\ignorespaces Transferability to different tracking architectures of our perturbations trained on SiamFC++\_GoogleNet. It is evaluated on OTB2015.}}{12}\protected@file@percent }
+\newlabel{tab:arch}{{XIII}{12}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{12}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {XIV}{\ignorespaces State-of-the-art comparison of untargeted attack performance on OTB2015 in terms of precision score.}}{12}\protected@file@percent }
+\newlabel{tab:SOTA}{{XIV}{12}}
+\@writefile{lot}{\contentsline {table}{\numberline {XV}{\ignorespaces State-of-the-art comparison of targeted attack performance on OTB2015 in terms of precision score.}}{12}\protected@file@percent }
+\newlabel{tab:SOTA1}{{XV}{12}}
+\@writefile{toc}{\contentsline {section}{References}{12}\protected@file@percent }
+\bibcite{VOT2016}{14}
+\bibcite{VOT2018}{15}
+\bibcite{VOT2019}{16}
+\bibcite{AutoTrack}{17}
+\bibcite{9376997}{18}
+\bibcite{9132673}{19}
+\bibcite{zhang2020ocean}{20}
+\bibcite{cui2020fully}{21}
+\bibcite{9157720}{22}
+\bibcite{SiamRPN}{23}
+\bibcite{SiamRPN++}{24}
+\bibcite{9339950}{25}
+\bibcite{9169672}{26}
+\bibcite{intriguing}{27}
+\bibcite{generating}{28}
+\bibcite{zhang2020adversarial}{29}
+\bibcite{morris2020textattack}{30}
+\bibcite{jin2020bert}{31}
+\bibcite{wei2019transferable}{32}
+\bibcite{9343885}{33}
+\bibcite{9294085}{34}
+\bibcite{meng2019white}{35}
+\bibcite{cheng2018query}{36}
+\bibcite{li2019nattack}{37}
+\bibcite{papernot2017practical}{38}
+\bibcite{li2020projection}{39}
+\bibcite{kurakin2018adversarial}{40}
+\bibcite{dai2018adversarial}{41}
+\bibcite{li2018second}{42}
+\bibcite{lin2017tactics}{43}
+\bibcite{khrulkov2018art}{44}
+\bibcite{mopuri2018nag}{45}
+\bibcite{zhang2020understanding}{46}
+\bibcite{mopuri2018generalizable}{47}
+\bibcite{chen2018shapeshifter}{48}
+\@writefile{lot}{\contentsline {table}{\numberline {XVI}{\ignorespaces State-of-the-art comparison of untargeted attack performance on VOT2016/2018 in terms of accuracy, robustness and expected average overlap (EAO).}}{13}\protected@file@percent }
+\newlabel{tab:sota_vot}{{XVI}{13}}
+\bibcite{PGD}{49}
+\bibcite{patch}{50}
+\bibcite{karmon2018lavan}{51}
+\bibcite{PAT}{52}
+\bibcite{GOTURN}{53}
+\bibcite{RTAA}{54}
+\bibcite{FGSM}{55}
+\bibcite{DBLP:conf/iclr/KurakinGB17a}{56}
+\bibcite{shafahi2020universal}{57}
+\bibcite{hirano2020simple}{58}
+\bibcite{focal}{59}
+\bibcite{iou-loss}{60}
+\bibcite{SSIM}{61}
+\bibcite{GoogLeNet}{62}
+\bibcite{COCO}{63}
+\bibcite{VID}{64}
+\bibcite{8630918}{65}
+\bibcite{ShuffleNet}{66}
+\bibcite{AlexNet}{67}
+\bibcite{CSA}{68}
+\@writefile{toc}{\contentsline {section}{Biographies}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Zhenbang Li}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{YaYa Shi}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Jin Gao}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Shaoru Wang}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Bing Li}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Pengpeng Liang}{14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Weiming Hu}{14}\protected@file@percent }
