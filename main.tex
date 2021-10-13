@@ -15,7 +15,7 @@
 \usepackage{placeins}
 \newcommand{\eg}{e.g.}
 \newcommand{\ie}{i.e.}
-%\renewcommand{\uline}{}
+\renewcommand{\uline}{}
 
 % 题目
 \hyphenation{op-tical net-works semi-conduc-tor}
@@ -23,7 +23,7 @@
 \title{A Simple and Strong Baseline for Universal Targeted Attacks on Siamese Visual Tracking}
 \author{
   Zhenbang Li, Yaya Shi, Jin Gao, Shaoru Wang,\\ Bing Li, Pengpeng Liang, Weiming Hu,~\IEEEmembership{Senior Member,~IEEE}
-  \thanks{This work is supported by National Key R\&D Program of China (No. 2018AAA0102802, No. 2018AAA0102803, No. 2018AAA0102800), Natural Science Foundation of China (Grant No. 61972394, 62036011, 61721004, 61906192), the Key Research Program of Frontier Sciences, CAS, Grant No. QYZDJ-SSW-JSC040, and the Science and Technology Service Network Initiative, CAS, Grant No. KFJ-STS-SCYD-317. Jin Gao and Bing Li are also supported in part by the Youth Innovation Promotion Association, CAS. \textit{(Corresponding author: Jin Gao.)}}
+  \thanks{This work is supported by National Key R\&D Program of China (No. 2018AAA0102802, No. 2018AAA0102800), Natural Science Foundation of China (Grant No. 61972394, 62036011, 61721004, 61806181, 61906192), the Key Research Program of Frontier Sciences, CAS, Grant No. QYZDJ-SSW-JSC040, and the Science and Technology Service Network Initiative, CAS, Grant No. KFJ-STS-SCYD-317. Jin Gao and Bing Li are also supported in part by the Youth Innovation Promotion Association, CAS. \textit{(Corresponding author: Jin Gao.)}}
   
   \thanks{Z. Li, J. Gao, S. Wang and B. Li are with National Laboratory of Pattern Recognition, Institute of Automation, Chinese Academy of Sciences, Beijing, 100190, China, and also with School of Artificial Intelligence, University of Chinese Academy of Sciences, Beijing, 100190, China (e-mail: \{zhenbang.li, jin.gao, bli\}@nlpr.ia.ac.cn, wangshaoru2018@ia.ac.cn).}
   \thanks{Y. Shi is with University of Science and Technology of China, Anhui, 230026, China (e-mail: shiyaya@mail.ustc.edu.cn).}
@@ -37,7 +37,7 @@
 
 % 摘要
 \begin{abstract}
-Siamese trackers are shown to be vulnerable to adversarial attacks recently. However, the existing attack methods craft the perturbations for each video independently, which comes at a non-negligible computational cost. In this paper, we show the existence of universal perturbations that can enable the targeted attack, e.g., forcing a tracker to follow the ground-truth trajectory with specified offsets, to be video-agnostic and free from inference in a network. Specifically, we attack a tracker by adding a universal translucent perturbation to the template image and adding a \textit{fake target}, i.e., a small universal adversarial patch, into the search images adhering to the predefined trajectory, so that the tracker outputs the location and size of the \textit{fake target} instead of the real target. Our approach allows perturbing a novel video to come at no additional cost except the mere addition operations -- and not require gradient optimization or network inference. Experimental results on several datasets demonstrate that our approach can effectively fool the Siamese trackers in a targeted attack manner. We show that the proposed perturbations are not only universal across videos, but also generalize well across different trackers. Such perturbations are therefore doubly universal, both with respect to the data and the network architectures. We will make our code publicly available.
+Siamese trackers are shown to be vulnerable to adversarial attacks recently. However, the existing attack methods craft the perturbations for each video independently, which comes at a non-negligible computational cost. In this paper, we show the existence of universal perturbations that can enable the targeted attack, e.g., forcing a tracker to follow the ground-truth trajectory with specified offsets, to be video-agnostic and free from inference in a network. Specifically, we attack a tracker by adding a universal translucent perturbation to the template image and adding a \textit{fake target}, i.e., a small universal adversarial patch, into the search images adhering to the predefined trajectory, so that the tracker outputs the location and size of the \textit{fake target} instead of the real target. Our approach allows perturbing a novel video to come at no additional cost except the mere addition operations -- and not require gradient optimization or network inference. Experimental results on several datasets demonstrate that our approach can effectively fool the Siamese trackers in a targeted attack manner. We show that the proposed perturbations are not only universal across videos, but also generalize well across different trackers. Such perturbations are therefore doubly universal, both with respect to the data and the network architectures. Our code is available at https://github.com/lizhenbang56/Universal-Targeted-Attacks-for-Siamese-Visual-Tracking.
 
 \end{abstract}
 
